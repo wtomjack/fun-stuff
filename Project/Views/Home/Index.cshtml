@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<section class="section columns">
+    <div id="draggable" class="column is-one-third" style="position: absolute">
+        <div id="content"></div>
+    </div>
+</section>
+
+<script>var initialData = @Html.Raw(Json.Encode(Model));</script>
+<script src="@Url.Content("~/Resources/WeatherComponent/weather.jsx")"></script>
+<script src="@Url.Content("~/Resources/draggable.js")"></script>
