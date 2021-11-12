@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using Project.Models;
-
+using Project.Services;
 namespace Project.Builders
 {
-    using Project.Services;
+
 
     public class HomeBuilder
     {
@@ -17,16 +17,9 @@ namespace Project.Builders
 
             var homeModel = new Home { Weather = weather.Result };
             this.AddImageIconPath(homeModel.Weather);
-            this.SetHourly(homeModel.Weather);
-            return homeModel;
-        }
 
-        public void SetHourly(Weather weather)
-        {
-            foreach (var item in weather.Hours)
-            {
-                item.Hour = item.DateTime.ToString("h tt");
-            }
+        
+            return homeModel;
         }
 
         public void AddImageIconPath(Weather weather)
@@ -53,6 +46,7 @@ namespace Project.Builders
                 {
                     item.IconImage = "Resources/WeatherComponent/WeatherIcons/Night.png";
                 }
+                item.Hour = item.DateTime.ToString("h tt");
             }
         }
     }

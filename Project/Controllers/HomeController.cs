@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 
 using Project.Builders;
+using Project.Services;
 
 namespace Project.Controllers
 {
@@ -14,6 +15,9 @@ namespace Project.Controllers
         {
             var homeBuilder = new HomeBuilder();
             var model = homeBuilder.Build();
+
+            var ss = new SportsService();
+            ss.Start();
 
             return this.View(model);
         }

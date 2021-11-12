@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Data.SqlClient;
 using Project.Models;
-using Project.Mapper;
 
 namespace Project.Database
 {
@@ -12,6 +9,7 @@ namespace Project.Database
     {
         private SqlConnection Connection;
         private string QueryString;
+        private bool _nullMenuList = true;
         //args should be in this format TableName, String code of Id's to pull
         public DataAccessService(Dictionary<string, string> args = null)
         {
@@ -24,7 +22,7 @@ namespace Project.Database
 
         private static SqlConnection BuildConnection()
         {
-            var connectionString = "Data Source=GP152130\\SqlExpress;Initial Catalog=Personal; Integrated Security = SSPI;";
+            var connectionString = "Data Source=GPL74591\\SqlExpress;Initial Catalog=Personal; Integrated Security = SSPI;";
             return new SqlConnection(connectionString);
         }
 
@@ -83,6 +81,11 @@ namespace Project.Database
                     catch (SqlException e)
                     {
                         ////TODO Add logging
+                        if (this._nullMenuList)
+                        {
+                            return new List<MenuItem>();
+                        }
+
                         throw new Exception(e.ToString());
                     }
                     finally
