@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html style="height: 100%">
+<html style="background: url(/Resources/Background.jpg) no-repeat center center fixed; -webkit-background-size: cover; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; ">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,24 +11,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.7.1/remarkable.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 </head>
-<body style="background-image: url(/Resources/Background.jpg); height:100%; background-position:center; background-repeat:no-repeat; background-size: cover;">
+<body>
     <!-- <nav class="container navbar is-full">LOGO</nav>-->
     <section class="section columns is-variable is-1-mobile is-3-tablet">
+        <div id="clock" class="is-centered"></div>
         <div class="container column is-one-quarter .is-narrow-desktop">
-           
+
         </div>
         <div class="container">
             @RenderBody()
         </div>
     </section>
-    <footer class="container is-fluid">
-        <p>&copy; @DateTime.Now.Year - Wesmatik Productions</p>
-    </footer>
+    <script src="@Url.Content("~/Resources/Clock/clock.jsx")"></script>
+
 
 </body>
 @Scripts.Render("~/bundles/jquery")
 @Scripts.Render("~/bundles/bootstrap")
-
 @RenderSection("scripts", required: false)
 </html>

@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using Project.Models.Weather;
 namespace Project.Models
 {
     public class Home
     {
-        public Weather Weather { get; set; }
+        public WeatherObject Weather { get; set; }
+
+        public string News { get; set; }
     }
 }

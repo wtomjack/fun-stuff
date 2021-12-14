@@ -16,8 +16,8 @@ namespace Project.Controllers
             var homeBuilder = new HomeBuilder();
             var model = homeBuilder.Build();
 
-            var ss = new SportsService();
-            ss.Start();
+            //var ss = new WeatherService();
+            //ss.GetInitialWeather("");
 
             return this.View(model);
         }

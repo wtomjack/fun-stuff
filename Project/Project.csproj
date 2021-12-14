@@ -40,6 +40,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>On</GenerateSerializationAssemblies>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -283,8 +284,11 @@
     <Compile Include="Models\MenuItem.cs" />
     <Compile Include="Models\MLApp.cs" />
     <Compile Include="Models\MLAppDashboard.cs" />
-    <Compile Include="Models\Weather.cs" />
+    <Compile Include="Models\Weather\Coordinates.cs" />
+    <Compile Include="Models\Weather\Temperature.cs" />
+    <Compile Include="Models\Weather\WeatherObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\NewsService.cs" />
     <Compile Include="Services\SportsService.cs" />
     <Compile Include="Services\WeatherService.cs" />
     <Compile Include="Startup.cs" />
@@ -292,12 +296,15 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.min.css" />
     <Compile Include="Database\DataAccessHelper.cs" />
+    <Content Include="Content\css\Ticker.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Resources\Background.jpg" />
+    <Content Include="Resources\Clock\clock.jsx" />
     <Content Include="Resources\draggable.js" />
+    <Content Include="Resources\NewsTicker\News.jsx" />
     <Content Include="Resources\WeatherComponent\hourly.jsx" />
     <Content Include="Resources\WeatherComponent\weather.jsx" />
     <Content Include="Resources\WeatherComponent\WeatherIcons\Background.jpg" />
@@ -345,7 +352,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\ApiController\" />
+    <Folder Include="Content\NewFolder1\" />
     <Folder Include="Utilities\" />
     <Folder Include="Views\DisplayTemplate\" />
     <Folder Include="Views\MLAppDashboard\" />
