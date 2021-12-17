@@ -20,7 +20,7 @@ namespace Project.Services
                 var request = new HttpRequestMessage
                 {
                     Method = HttpMethod.Get,
-                    RequestUri = new Uri("https://newsdata.io/api/1/news?apikey=pub_2740273453f235601a0dd28a2577dd712fb7&country=us")
+                    RequestUri = new Uri("https://newsdata.io/api/1/news?apikey=pub_2740273453f235601a0dd28a2577dd712fb7&country=us&language=en")
                 };
 
                 using (var response = await client.SendAsync(request).ConfigureAwait(false))

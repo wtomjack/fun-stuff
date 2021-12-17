@@ -28,7 +28,6 @@ namespace Project.Mapper
             foreach (var y in objs)
             { // if 'obj' is a JObject
                 news = news + y["title"] + ".   --";
-                news.PadRight(30);
             }
             return news;
 

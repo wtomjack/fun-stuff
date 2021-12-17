@@ -305,6 +305,7 @@
     <Content Include="Resources\Clock\clock.jsx" />
     <Content Include="Resources\draggable.js" />
     <Content Include="Resources\NewsTicker\News.jsx" />
+    <Content Include="Resources\Resume\resume.jsx" />
     <Content Include="Resources\WeatherComponent\hourly.jsx" />
     <Content Include="Resources\WeatherComponent\weather.jsx" />
     <Content Include="Resources\WeatherComponent\WeatherIcons\Background.jpg" />

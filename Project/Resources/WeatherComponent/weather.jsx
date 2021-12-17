@@ -8,7 +8,7 @@ class Weather extends React.Component {
             cityValue: '',
             feelsLikeTemp: initialWeatherData.Temperature.FeelsLikeTemp,
             currentTemp: initialWeatherData.Temperature.CurrentTemp,
-            tempMin: initialWeatherData.Temperature.Min,
+            tempMin: initialWeatherData.Temperature.Minimum,
             tempMax: initialWeatherData.Temperature.Max,
             humidity: initialWeatherData.Temperature.Humidity
 
@@ -43,36 +43,36 @@ class Weather extends React.Component {
     render() {
         return (
         <div>
-    {!this.state.isHidden
-        ? <div className="card">
-               <div className="card-content">
-                    <div className="media">
-                    <div className="media-left">
-                        <figure className="image is-48x48">
-                            <img src={initialWeatherData.imageIcon} alt="Placeholder image"></img>
-                        </figure>
-                    </div>
-                    <div className="media-content">
-                        <p className="title is-4">Temperature: {this.calculateKelvinToFarenheight(this.state.currentTemp)} <span>&deg;F</span></p>
-                        <p className="subtitle is-6">
-                            Feels Like: {this.calculateKelvinToFarenheight(this.state.feelsLikeTemp)} <span>&deg;F</span> <br />
-                            Minimum: {this.calculateKelvinToFarenheight(this.state.tempMin)} <span>&deg;F</span> <br />
-                            Maximum: {this.calculateKelvinToFarenheight(this.state.tempMax)} <span>&deg;F</span> <br />
-                            Humidity: {this.state.humidity} <br />
-                        </p>
-                    </div>
-                </div>
+                {!this.state.isHidden
+                    ? <div className="card" style={{ background: "url('/Resources/WeatherComponent/WeatherIcons/weatherBackground.jpg') no-repeat center center fixed" }}>
+                        <div className="card-content">
+                            <div className="media">
+                                <div className="media-left">
+                                    <figure className="image is-48x48">
+                                        <img src={initialWeatherData.imageIcon} alt="Placeholder image"></img>
+                                    </figure>
+                                </div>
+                                <div className="media-content">
+                                    <p className="title is-4">Temperature: {this.calculateKelvinToFarenheight(this.state.currentTemp)} <span>&deg;F</span></p>
+                                    <p className="subtitle is-6">
+                                        Feels Like: {this.calculateKelvinToFarenheight(this.state.feelsLikeTemp)} <span>&deg;F</span> <br />
+                                        Minimum: {this.calculateKelvinToFarenheight(this.state.tempMin)} <span>&deg;F</span> <br />
+                                        Maximum: {this.calculateKelvinToFarenheight(this.state.tempMax)} <span>&deg;F</span> <br />
+                                        Humidity: {this.state.humidity} <br />
+                                    </p>
+                                </div>
+                            </div>
 
                             <div className="content">
-                                <input id="weatherInput" className="input is-primary m-1" defaultValue={this.state.cityValue} onChange={this.inputChange.bind(this.state.cityValue)} type = "text" />
-                    <div className="buttons are-small is-centered m-0">
-                        <button className="button" onClick={this.hide}>Hide</button>
-                        <button className="button" onClick={this.submit}>Submit</button>
+                                <input id="weatherInput" className="input is-primary m-1" defaultValue={this.state.cityValue} onChange={this.inputChange.bind(this.state.cityValue)} type="text" />
+                                <div className="buttons is-centered ">
+                                    <button className="button" onClick={this.hide}>Hide</button>
+                                    <button className="button" onClick={this.submit}>Submit</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        : <button className="button" onClick={this.open}>Hide</button>
+                    : <button className="button" style={{ backgroundColor: '#87ceeb', fontWeight: 700 }} onClick={this.open}>Display Weather</button>
                 }
             </div>
 
