@@ -30,26 +30,25 @@ class Weather extends React.Component {
         this.setState({ cityValue: event.target.value })
     }
 
-    open = () => {
-        this.setState({ isHidden: false });
-    }
 
     hide = () => {
-        this.setState({ isHidden: true });
+        document.getElementById('weatherContent').style.display('none');
     }
 
 
 
     render() {
         return (
-        <div>
-                {!this.state.isHidden
-                    ? <div className="card" style={{ background: "url('/Resources/WeatherComponent/WeatherIcons/weatherBackground.jpg') no-repeat center center fixed" }}>
+            <div className="modal is-active">
+                <div className="modal-background"></div>
+                <div className="modal-content">
+                    <section className="section has-text-centered">
+                    <div className="card" style={{ background: "url('/Resources/WeatherComponent/WeatherIcons/weatherBackground.jpg') no-repeat center center fixed" }}>
                         <div className="card-content">
                             <div className="media">
-                                <div className="media-left">
-                                    <figure className="image is-48x48">
-                                        <img src={initialWeatherData.imageIcon} alt="Placeholder image"></img>
+                                    <div className="level-item has-text-centered">
+                                        <figure className="image is-128x128">
+                                            <img className='is-rounded center center fixed' src={initialWeatherData.imageIcon} alt="Placeholder image"></img>
                                     </figure>
                                 </div>
                                 <div className="media-content">
@@ -66,14 +65,14 @@ class Weather extends React.Component {
                             <div className="content">
                                 <input id="weatherInput" className="input is-primary m-1" defaultValue={this.state.cityValue} onChange={this.inputChange.bind(this.state.cityValue)} type="text" />
                                 <div className="buttons is-centered ">
-                                    <button className="button" onClick={this.hide}>Hide</button>
                                     <button className="button" onClick={this.submit}>Submit</button>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    : <button className="button" style={{ backgroundColor: '#87ceeb', fontWeight: 700 }} onClick={this.open}>Display Weather</button>
-                }
+                        </div>
+                    </section>
+                </div>
+                <button className="modal-close is-large" aria-label="close" onClick={() => { document.getElementById('weatherContent').style.display = 'none'; }}></button>
             </div>
 
     );

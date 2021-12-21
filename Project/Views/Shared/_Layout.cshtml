@@ -6,8 +6,8 @@
     <title>@ViewBag.Title-Wesmatik</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.0/umd/react.development.js"></script>
-    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.0/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.0/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.0/umd/react-dom.development.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.7.1/remarkable.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -15,15 +15,9 @@
 </head>
 <body>
     <!-- <nav class="container navbar is-full">LOGO</nav>-->
-    <section class="section columns is-variable is-1-mobile is-3-tablet">
         <div id="clock" class="is-centered"></div>
-        <div class="container column is-one-quarter .is-narrow-desktop">
-
-        </div>
-        <div class="container">
-            @RenderBody()
-        </div>
-    </section>
+         @RenderBody()
+   
     <script src="@Url.Content("~/Resources/Clock/clock.jsx")"></script>
 
 

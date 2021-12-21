@@ -302,10 +302,14 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Resources\Background.jpg" />
+    <Content Include="Resources\BasePage.jsx" />
     <Content Include="Resources\Clock\clock.jsx" />
     <Content Include="Resources\draggable.js" />
+    <Content Include="Resources\Hangman\hangman.jsx" />
     <Content Include="Resources\NewsTicker\News.jsx" />
+    <Content Include="Resources\Papers\papers.jsx" />
     <Content Include="Resources\Resume\resume.jsx" />
+    <Content Include="Resources\Settings\Settings.jsx" />
     <Content Include="Resources\WeatherComponent\hourly.jsx" />
     <Content Include="Resources\WeatherComponent\weather.jsx" />
     <Content Include="Resources\WeatherComponent\WeatherIcons\Background.jpg" />
