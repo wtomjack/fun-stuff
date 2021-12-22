@@ -307,6 +307,7 @@
     <Content Include="Resources\draggable.js" />
     <Content Include="Resources\Hangman\hangman.jsx" />
     <Content Include="Resources\NewsTicker\News.jsx" />
+    <Content Include="Resources\Papers\Ethics\Ethics.jsx" />
     <Content Include="Resources\Papers\papers.jsx" />
     <Content Include="Resources\Resume\resume.jsx" />
     <Content Include="Resources\Settings\Settings.jsx" />
