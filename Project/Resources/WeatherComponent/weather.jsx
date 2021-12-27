@@ -10,7 +10,8 @@ class Weather extends React.Component {
             currentTemp: initialWeatherData.Temperature.CurrentTemp,
             tempMin: initialWeatherData.Temperature.Minimum,
             tempMax: initialWeatherData.Temperature.Max,
-            humidity: initialWeatherData.Temperature.Humidity
+            humidity: initialWeatherData.Temperature.Humidity,
+            errorState: false
 
         }
     }
@@ -21,13 +22,23 @@ class Weather extends React.Component {
     }
 
     submit = () => {
-        fetch('https://api.openweathermap.org/data/2.5/weather?q=' + this.state.cityValue + '&appid=7d7b91c90ab3a1a9ef45c4ec96aa91f6')
-            .then(response => response.json())
-            .then(data => this.setState({ feelsLikeTemp: data.main["feels_like"], currentTemp: data.main.temp, tempMin: data.main["temp_min"], tempMax: data.main["temp_max"], humidity: data.main["humidity"] }));
+        if (!this.state.errorState) {
+            fetch('https://api.openweathermap.org/data/2.5/weather?q=' + this.state.cityValue + '&appid=7d7b91c90ab3a1a9ef45c4ec96aa91f6')
+                .then(response => response.json())
+                .then(data => this.setState({ feelsLikeTemp: data.main["feels_like"], currentTemp: data.main.temp, tempMin: data.main["temp_min"], tempMax: data.main["temp_max"], humidity: data.main["humidity"] }));
+        }
     }
 
     inputChange = (event) => {
-        this.setState({ cityValue: event.target.value })
+
+        let res = /^[a-zA-Z]+$/.test(event.target.value);
+        if (!res) {
+            this.setState({ errorState: true })
+        }
+        else
+        {
+            this.setState({ cityValue: event.target.value, errorState:false })
+        }
     }
 
 
@@ -62,8 +73,22 @@ class Weather extends React.Component {
                                 </div>
                             </div>
 
-                            <div className="content">
-                                <input id="weatherInput" className="input is-primary m-1" defaultValue={this.state.cityValue} onChange={this.inputChange.bind(this.state.cityValue)} type="text" />
+                                <div className="content">
+                                    <div class="field">
+                                        <div class="control has-icons-left has-icons-right">
+                                            <input class= {this.state.errorState ? "input is-danger" : "input"} defaultValue={"Enter City Name"} onChange={this.inputChange.bind(this.state.cityValue)} type="text" />
+                                                <span class="icon is-small is-left">
+                                                    <i class="fas fa-envelope"></i>
+                                                </span>
+                                                <span class="icon is-small is-right">
+                                                    <i class="fas fa-exclamation-triangle"></i>
+                                                </span>
+                                        </div>
+                                        { this.state.errorState &&
+                                            <p class="help is-danger">No special characters/numbers/whitespace</p>}
+                                        </div>
+
+
                                 <div className="buttons is-centered ">
                                     <button className="button" onClick={this.submit}>Submit</button>
                                 </div>

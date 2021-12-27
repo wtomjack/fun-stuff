@@ -23,7 +23,7 @@ class BasePage extends React.Component {
                     <ul className="menu-list has-text-white">
                         <li><a className="has-text-white" onClick={() => this.showComponent('weatherContent')}> Weather</a></li>
                         <li><a className="has-text-white" onClick={() => this.showComponent('hangmanContent')}>Hangman</a></li>
-                        <li><a className="has-text-white">Scoreboard</a></li>
+                        <li><a className="has-text-white" onClick={() => this.showComponent('nbaContent')}>NBA Scoreboard</a></li>
                     </ul>
                     <p className="menu-label has-text-white">
                         Links

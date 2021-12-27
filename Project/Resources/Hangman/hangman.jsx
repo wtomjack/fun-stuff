@@ -1694,11 +1694,11 @@
                 <div className="modal-background"></div>
                 <div className="modal-content">
                     <section className="section has-text-centered">
-                        <div className="card">
+                        <div className="card" style={{background: "url('/Resources/WeatherComponent/WeatherIcons/weatherBackground.jpg') center center fixed" }}>
                             <div className="card-content">
                                 <div className="media">
                                     <div className="media-content">
-                                            <img src={'Resources/Hangman/image' + [nWrong] + '.jpg'} alt={alternateText} />
+                                            <img src={'Resources/Hangman/image' + [nWrong] + '.jpg'} />
                                             <p>Number Wrong: {nWrong}</p>
 
 
