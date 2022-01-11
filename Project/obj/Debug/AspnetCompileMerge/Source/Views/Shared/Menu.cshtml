@@ -1,0 +1,13 @@
+﻿@model Menu
+<aside class="menu">
+        @foreach (var items in Model.MenuItems)
+        {
+            <p class="menu-label" style="color:#FFFAF0">@items.Title</p>
+            <ul class="menu-list">
+                @foreach (var subItems in items.SubItem)
+                {
+                    <li><a href=@subItems.URL style="color:#E6E6FA">@subItems.Title</a></li>
+                }
+            </ul>
+        }
+</aside>

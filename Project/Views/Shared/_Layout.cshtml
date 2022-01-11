@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title-Wesmatik</title>
-    @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.0/umd/react.development.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.0/umd/react-dom.development.js"></script>
@@ -15,14 +14,15 @@
 </head>
 <body>
     <!-- <nav class="container navbar is-full">LOGO</nav>-->
-        <div id="clock" class="is-centered"></div>
-         @RenderBody()
-   
+    <div id="clock" class="is-centered"></div>
+    @RenderBody()
+
     <script src="@Url.Content("~/Resources/Clock/clock.jsx")"></script>
 
 
 </body>
 @Scripts.Render("~/bundles/jquery")
+@Styles.Render("~/Content/css/test")
 @Scripts.Render("~/bundles/bootstrap")
 @RenderSection("scripts", required: false)
 </html>

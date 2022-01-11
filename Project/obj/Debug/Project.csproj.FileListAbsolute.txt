@@ -305,6 +305,7 @@ C:\Coding\MyWebsite\fun-stuff\Project\bin\Microsoft.Owin.Security.Twitter.dll
 C:\Coding\MyWebsite\fun-stuff\Project\bin\Microsoft.Threading.Tasks.dll
 C:\Coding\MyWebsite\fun-stuff\Project\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll
 C:\Coding\MyWebsite\fun-stuff\Project\bin\Microsoft.Threading.Tasks.Extensions.dll
+C:\Coding\MyWebsite\fun-stuff\Project\bin\Microsoft.Web.Deployment.dll
 C:\Coding\MyWebsite\fun-stuff\Project\bin\Microsoft.Web.Infrastructure.dll
 C:\Coding\MyWebsite\fun-stuff\Project\bin\MsieJavaScriptEngine.dll
 C:\Coding\MyWebsite\fun-stuff\Project\bin\Newtonsoft.Json.dll
@@ -323,6 +324,9 @@ C:\Coding\MyWebsite\fun-stuff\Project\bin\System.Web.WebPages.dll
 C:\Coding\MyWebsite\fun-stuff\Project\bin\System.Web.WebPages.Razor.dll
 C:\Coding\MyWebsite\fun-stuff\Project\bin\WebActivatorEx.dll
 C:\Coding\MyWebsite\fun-stuff\Project\bin\WebGrease.dll
+C:\Coding\MyWebsite\fun-stuff\Project\bin\Microsoft.Web.Delegation.dll
+C:\Coding\MyWebsite\fun-stuff\Project\bin\Microsoft.Web.Administration.dll
+C:\Coding\MyWebsite\fun-stuff\Project\bin\Microsoft.Web.Deployment.Tracing.dll
 C:\Coding\MyWebsite\fun-stuff\Project\bin\AdvancedStringBuilder.xml
 C:\Coding\MyWebsite\fun-stuff\Project\bin\JavaScriptEngineSwitcher.Core.xml
 C:\Coding\MyWebsite\fun-stuff\Project\bin\JavaScriptEngineSwitcher.Msie.xml
@@ -376,4 +380,3 @@ C:\Coding\MyWebsite\fun-stuff\Project\obj\Debug\Project.csproj.CoreCompileInputs
 C:\Coding\MyWebsite\fun-stuff\Project\obj\Debug\Project.csproj.CopyComplete
 C:\Coding\MyWebsite\fun-stuff\Project\obj\Debug\Project.dll
 C:\Coding\MyWebsite\fun-stuff\Project\obj\Debug\Project.pdb
-C:\Coding\MyWebsite\fun-stuff\Project\obj\Debug\Project.csproj.AssemblyReference.cache

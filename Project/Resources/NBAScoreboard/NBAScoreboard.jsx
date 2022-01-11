@@ -61,7 +61,7 @@ class NBA extends React.Component {
                 <div className="modal-background"></div>
                 <div className="modal-content">
                     <section className="section has-text-centered">
-                        <div className="card image is-256x256" style={{ background: "url('/Resources/NBAScoreboard/Background.jpg')  center center fixed" }}>
+                        <div className="card image is-256x256" style={{ background: "url('Resources/NBAScoreboard/Background.jpg')  center center fixed" }}>
                             <div className="card-content">
                                 <div className="media">
                                     <div className="media-content">

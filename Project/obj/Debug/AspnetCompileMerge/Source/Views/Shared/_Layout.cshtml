@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html class="is-clipped" style="background: url(/Resources/Background.jpg) no-repeat center center fixed; -webkit-background-size: cover; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; ">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title-Wesmatik</title>
+    @Scripts.Render("~/bundles/modernizr")
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.0/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.0/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.7.1/remarkable.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</head>
+<body>
+    <!-- <nav class="container navbar is-full">LOGO</nav>-->
+    <div id="clock" class="is-centered"></div>
+    @RenderBody()
+
+    <script src="@Url.Content("~/Resources/Clock/clock.jsx")"></script>
+
+
+</body>
+@Scripts.Render("~/bundles/jquery")
+@Styles.Render("~/Content/css/test")
+@Scripts.Render("~/bundles/bootstrap")
+@RenderSection("scripts", required: false)
+</html>

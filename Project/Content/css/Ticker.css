@@ -1,13 +1,14 @@
-﻿@keyframes ticker-kf {
+﻿
+@keyframes ticker-kf {
     0% {
         transform: translate3d(0, 0, 0);
     }
 
     100% {
-        transform: translate3d(-108rem, 0, 0);
+        transform: translate3d(-200rem, 0, 0);
     }
 }
 
 .img-ticker {
-    animation: ticker-kf 50s linear infinite;
+    animation: ticker-kf 120s linear infinite;
 }

@@ -74,18 +74,18 @@ class Weather extends React.Component {
                             </div>
 
                                 <div className="content">
-                                    <div class="field">
-                                        <div class="control has-icons-left has-icons-right">
-                                            <input class= {this.state.errorState ? "input is-danger" : "input"} defaultValue={"Enter City Name"} onChange={this.inputChange.bind(this.state.cityValue)} type="text" />
-                                                <span class="icon is-small is-left">
-                                                    <i class="fas fa-envelope"></i>
+                                    <div className="field">
+                                        <div className="control has-icons-left has-icons-right">
+                                            <input className= {this.state.errorState ? "input is-danger" : "input"} defaultValue={"Enter City Name"} onChange={this.inputChange.bind(this.state.cityValue)} type="text" />
+                                                <span className="icon is-small is-left">
+                                                    <i className="fas fa-envelope"></i>
                                                 </span>
-                                                <span class="icon is-small is-right">
-                                                    <i class="fas fa-exclamation-triangle"></i>
+                                                <span className="icon is-small is-right">
+                                                    <i className="fas fa-exclamation-triangle"></i>
                                                 </span>
                                         </div>
                                         { this.state.errorState &&
-                                            <p class="help is-danger">No special characters/numbers/whitespace</p>}
+                                            <p className="help is-danger">No special characters/numbers/whitespace</p>}
                                         </div>
 
 

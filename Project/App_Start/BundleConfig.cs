@@ -28,8 +28,8 @@ namespace Project
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/css/bulma.css",
+            bundles.Add(new StyleBundle("~/Content/css/test").Include(
+                      "~/Content/css/bulma1.css",
                       "~/Content/css/Ticker.css"));
         }
     }

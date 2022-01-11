@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+
+}
+
+
+<section class="section columns">
+
+    <div id="basePage"></div>
+    <div id="nbaContent" style="display: none"></div>
+    <div id="weatherContent" style="display: none"></div>
+    <div id="hangmanContent" style="display: none "></div>
+    <div id="resumeContent" style="display: none "></div>
+    <div id="settingsContent" style="display: none "></div>
+    <div id="papersContent" style="display: none"></div>
+    <div id="ethicsContent" style="display: none"></div>
+    <div id="uxContent" style="display: none"></div>
+    <div id="newsTicker" style="position: fixed; bottom: 0; width: 100%;" class="column is-one-third"></div>
+</section>
+
+
+<script>var initialWeatherData = @Html.Raw(Json.Encode(Model.Weather));</script>
+<script>var initialNewsData = @Html.Raw(Json.Encode(Model.News))</script>
+<script src="@Url.Content("~/Resources/BasePage.jsx")"></script>
+<script src="@Url.Content("~/Resources/WeatherComponent/weather.jsx")"></script>
+<script src="@Url.Content("~/Resources/Papers/papers.jsx")"></script>
+<script src="@Url.Content("~/Resources/NBAScoreboard/NBAScoreboard.jsx")"></script>
+
+<script src="@Url.Content("~/Resources/Papers/Ethics/Ethics.jsx")"></script>
+<script src="@Url.Content("~/Resources/Papers/HCI/ux.jsx")"></script>
+
+<script src="@Url.Content("~/Resources/Settings/Settings.jsx")"></script>
+<script src="@Url.Content("~/Resources/Hangman/hangman.jsx")"></script>
+<script src="@Url.Content("~/Resources/Resume/resume.jsx")"></script>
+<script type="module" src="@Url.Content("~/Resources/NewsTicker/News.jsx")"></script>
