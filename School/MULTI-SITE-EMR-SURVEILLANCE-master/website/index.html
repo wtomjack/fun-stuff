@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Main</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body class='container'>
+	<h1>PrEP Clinical Decision Support Tool </h1>
+	
+	<div class='row' id='navigationpanel'>
+		<button type="HomeButton" onclick="location.href = 'index.html';" class='col-md-4' style='color:white;'>Home</button>
+		<button type="SearchButton" onclick="location.href = 'search.html';" class='col-md-4'>Search Patient / Offered PrEP</button>
+		<button type="SurveillanceButton" onclick="location.href = 'surveillance.html';" class='col-md-4'>Surveillance</button>
+	</div>
+	
+	<div id='bodypanel'>
+	<p></p>
+	<p>In 2012, a daily medication for the prevention of acquiring HIV infection (called PrEP) was approved and in 2014, CDC issued clinical practice guidelines for its use. CDC estimates that 1.2 million Americans
+	have indications for its use. A clinical decision support tool is needed to assist clinicians in identifying their patients with indications for PrEP Surveillance of the provision of PrEP and associated 
+	laboratory tests to appropriate patients is dependent on developing EMR-based data collection methods that will operate accross multiple sites with different EMR systems.</p>
+	<h2>Project Objectives</h2>
+	<p>Objective 1. using algorithms defined in the CDC guidelines develop a FHIR-based clinical support that informs clinicians which of their patients should be offered PrEP. </br>
+	Objective 2. is to pull EMR data on demographics, diagnoses, lab tests, and medications for use in an algorithm that defines PrEP patients for surveillance purposes.</p>
+	</div>
+</body>
+<footer class='container'>
+  <p>PrEP Clinical Decision Support Tool - Version 1.0.0</p>
+</footer>
+</div>
+</html>

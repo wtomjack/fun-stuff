@@ -1,0 +1,5 @@
+FROM maven:3.3.9-jdk-8-onbuild
+COPY . /usr/src/app
+WORKDIR /usr/src/app
+RUN mvn clean verify
+CMD ["java","-jar","/usr/src/app/target/PrepReco-1.0.0-SNAPSHOT.jar"]

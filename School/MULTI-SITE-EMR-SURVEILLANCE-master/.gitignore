@@ -1,0 +1,23 @@
+# General
+*.class
+.DS_Store
+.settings/
+target/
+nohup.out
+tmp/
+
+# Intellij
+*.iml
+.idea/
+/out/
+
+# Eclipse
+.classpath
+.project
+
+# Package Files
+*.jar
+*.war
+*.ear
+*.gz
+*.zip

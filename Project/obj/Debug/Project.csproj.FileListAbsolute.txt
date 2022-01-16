@@ -380,3 +380,4 @@ C:\Coding\MyWebsite\fun-stuff\Project\obj\Debug\Project.csproj.CoreCompileInputs
 C:\Coding\MyWebsite\fun-stuff\Project\obj\Debug\Project.csproj.CopyComplete
 C:\Coding\MyWebsite\fun-stuff\Project\obj\Debug\Project.dll
 C:\Coding\MyWebsite\fun-stuff\Project\obj\Debug\Project.pdb
+C:\Coding\MyWebsite\fun-stuff\Project\obj\Debug\Project.csproj.AssemblyReference.cache

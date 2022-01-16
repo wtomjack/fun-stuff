@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+    # web service
+    service:
+        build: 
+          context: ./service
+          dockerfile: Dockerfile-jenkins
+        ports:
+            - 8080:8080
+
+    # website
+    website:
+        build: 
+          context: ./website
+          dockerfile: Dockerfile-jenkins
+        ports:
+            - 80:80
+        depends_on:
+            - service

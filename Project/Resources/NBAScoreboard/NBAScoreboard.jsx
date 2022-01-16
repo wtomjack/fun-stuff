@@ -66,8 +66,9 @@ class NBA extends React.Component {
                                 <div className="media">
                                     <div className="media-content">
                                         {this.state.games && this.state.games.map((item, i) =>
-                                            <p className = "has-text-black">{item.vTeam.nickName + " " + item.vTeam.score.points + " @ " + item.hTeam.nickName + " " + item.hTeam.score.points} </p>
-
+                                            <div className="box">
+                                                <p className = "has-text-black">{item.vTeam.nickName + " " + item.vTeam.score.points + " @ " + item.hTeam.nickName + " " + item.hTeam.score.points} </p>
+                                            </div>
                                         )}
                                        
                                     </div>

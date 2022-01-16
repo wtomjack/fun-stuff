@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <script>
+        $(document).ready(function () {
+            $(".submit").click(function () {
+
+                var patientId = $('[name="patientId"]').val();
+                var patientIdRegex = /^[a-zA-Z0-9\-]*$/;
+
+                if (!patientIdRegex.test(patientId) || patientId === "") {
+                    alert("Please enter a valid patient id (numerics only)");
+                }
+                else {
+                    const vrl = location.protocol+'//'+location.host;
+                    const port = location.host.indexOf('local') > -1 ? ':'+8080 : '';
+                    var url = vrl+port+"/api/getPatientById?id=" + patientId;
+                    $('[name="startDate"]').empty();
+
+                    $.getJSON(url, function (data) {
+                        if (data.message === 'patient not found') {
+                            $('.answer').val("Patient not Found");
+                        }
+                        else {
+                            $('.answer').val(data.status);
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+<div class='container'>
+    <h1>PrEP Clinical Decision Support Tool </h1>
+    <div class='row' id='navigationpanel'>
+        <button type="HomeButton" onclick="location.href = 'index.html';"
+                class='col-md-4' style='color:white;'>Home
+        </button>
+        <button type="SearchButton" onclick="location.href = 'search.html';"
+                class='col-md-4'>Search Patient / Offered PrEP
+        </button>
+        <button type="SurveillanceButton"
+                onclick="location.href = 'surveillance.html';" class='col-md-4'>
+            Surveillance
+        </button>
+    </div>
+    <div id='bodypanel'>
+        <h5>Search Patient</h5></br>
+		<p>FHIR-based clinical support tool that informs clinicians which of their patients should be offered PrEP.</p>
+        <div class='row'>
+            <p class='col-md-2'>Patient ID: </p>
+            <input type='text' name='patientId' id='textarea'
+                   class='col-md-5'>
+        </div>
+        <button type="SubmitButton" class="submit">Submit</button>
+        </br></br>
+        <p class='col-md-2'>Result:</p><input type='text' id="textarea"
+                                              class='col-md-3 answer' readonly>
+        </br></br></br></br>
+    </div>
+
+</div>
+
+
+</body>
+<div class='container'>
+    <footer>
+        <p>PrEP Clinical Decision Support Tool - Version 1.0.0</p>
+    </footer>
+</div>
+</html>
